@@ -28,8 +28,8 @@
       Неправильная почта и пароль
     </div>
     <!-- Button trigger modal registration-->
-    <button type="button" class="btn btn-lg btn-primary btn-block"
-            th:attr="data-target=${'#registation'}" data-row="${userAdd}"
+    <button type="submit" class="btn btn-lg btn-primary btn-block"
+            th:attr="data-target=${'#registation'}" data-row="${userReg}"
             data-toggle="modal" data-target="#exampleModal">
       Зарегистрироваться на сайте
     </button>
@@ -48,7 +48,7 @@
       </div>
       <div class="modal-body">
         <div class="row justify-content-center align-items-center text-center">
-        <form th:method="POST" th:action="@{/login/registration}" th:object="${userAdd}">
+        <form th:method="POST" th:action="@{/login/registration}" th:object="${userReg}">
           <div class="form-group">
             <label for="userName1"><b>Введите имя</b></label>
             <input type="text" class="form-control" th:field="*{userName}" id="userName1"/>
@@ -91,7 +91,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
-        <button type="button" class="btn btn-primary">Завершить регистрацию</button>
+        <button type="submit" class="btn btn-primary">Завершить регистрацию</button>
       </div>
       </div>
     </div>
